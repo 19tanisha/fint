@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import React from "react";
 import { Sizes, Styles } from "../Constants/Constants";
-import { MaterialIcons } from "@expo/vector-icons";
+import { MaterialIcons, FontAwesome } from "@expo/vector-icons";
 
 const data = [
   {
@@ -39,11 +39,11 @@ const ScenesComponent = () => {
           return (
             <TouchableOpacity style={styles.cardContainer}>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <MaterialIcons name="flight" size={24} color="red" />
+                <FontAwesome name="rocket" size={24} color="red" />
                 <Text
                   style={{
                     ...Styles.regularText,
-                    padding: Sizes.padding,
+                    paddingLeft: Sizes.padding + 20,
                   }}
                 >
                   {item.name}

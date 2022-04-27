@@ -27,7 +27,6 @@ const Styles = {
   regularText: {
     fontSize: 10,
     color: "black",
-    fontFamily: "PoppinsRegular",
   },
 };
 

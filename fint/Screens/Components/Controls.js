@@ -1,14 +1,37 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { Sizes, Styles } from "../Constants/Constants";
+import { Ionicons } from "@expo/vector-icons";
 
 const Controls = () => {
   return (
     <View>
       <View
         style={{
+          width: Sizes.width - 20,
+          backgroundColor: "white",
+          height: 70,
+          marginBottom: Sizes.margin,
+          alignSelf: "center",
           flexDirection: "row",
-          width: Sizes.width - 10,
+          alignItems: "center",
+        }}
+      >
+        <Ionicons
+          name="chevron-forward-circle"
+          size={24}
+          color="grey"
+          style={{ paddingLeft: Sizes.padding }}
+        />
+        <View style={{ paddingLeft: Sizes.padding }}>
+          <Text>Window Roller Blind</Text>
+          <Text>OFF</Text>
+        </View>
+      </View>
+      <View
+        style={{
+          flexDirection: "row",
+          width: Sizes.width - 20,
         }}
       >
         <TouchableOpacity style={styles.controlContainer}>
@@ -16,9 +39,10 @@ const Controls = () => {
             style={{
               ...Styles.regularText,
               padding: Sizes.padding,
+              color: "purple",
             }}
           >
-            More Open
+            Open
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.controlContainer}>
@@ -28,7 +52,7 @@ const Controls = () => {
               padding: Sizes.padding,
             }}
           >
-            More Close
+            Pause
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.controlContainer}>
@@ -38,11 +62,17 @@ const Controls = () => {
               padding: Sizes.padding,
             }}
           >
-            More Close
+            Close
           </Text>
         </TouchableOpacity>
       </View>
-      <View style={{ flexDirection: "row", marginTop: Sizes.margin }}>
+      <View
+        style={{
+          flexDirection: "row",
+          marginTop: Sizes.margin,
+          width: Sizes.width - 20,
+        }}
+      >
         <TouchableOpacity style={styles.montrolContainer}>
           <Text
             style={{
@@ -50,7 +80,7 @@ const Controls = () => {
               padding: Sizes.padding,
             }}
           >
-            More Close
+            Blackout
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.montrolContainer}>
@@ -60,7 +90,7 @@ const Controls = () => {
               padding: Sizes.padding,
             }}
           >
-            More Close
+            Flip +
           </Text>
         </TouchableOpacity>
       </View>
